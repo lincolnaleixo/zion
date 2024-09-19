@@ -1,2 +1,2 @@
 # logger-docker
-mongodb database in docker
+Sentry in docker
