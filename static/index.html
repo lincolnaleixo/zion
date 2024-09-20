@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smith Logger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Servers</h2>
+            <ul id="server-list">
+                <!-- Dynamically populated -->
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Logs</h1>
+                <div class="filters">
+                    <label for="level-filter">Level:</label>
+                    <select id="level-filter">
+                        <option value="">All</option>
+                        <option value="DEBUG">DEBUG</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARN">WARN</option>
+                        <option value="ERROR">ERROR</option>
+                        <option value="FATAL">FATAL</option>
+                    </select>
+
+                    <label for="sort-order">Sort:</label>
+                    <select id="sort-order">
+                        <option value="desc">Newest First</option>
+                        <option value="asc">Oldest First</option>
+                    </select>
+                </div>
+            </header>
+            <table id="logs-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Level</th>
+                        <th>Server</th>
+                        <th>Application</th>
+                        <th>Message</th>
+                        <th>Error Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
