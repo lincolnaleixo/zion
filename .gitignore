@@ -8,3 +8,6 @@
 
 # Generated documentation
 /docs/
+.aider*
+aider.conf.yml
+rules.txt
