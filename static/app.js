@@ -88,9 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                   <p class="text-gray-800 mb-2">${log.message}</p>
                   <div class="flex justify-between text-xs text-gray-500">
-                      <span>Source: ${log.source}</span>
-                      <span>User: ${log.user}</span>
+                      <span>Application: ${log.application}</span>
+                      <span>Environment: ${log.environment}</span>
                   </div>
+                  ${log.error_code ? `<div class="text-xs text-red-500 mt-2">Error Code: ${log.error_code}</div>` : ''}
               `;
               this.logsContainer.appendChild(logElement);
           });
@@ -104,9 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       getLevelClass(level) {
           switch (level) {
+              case 'DEBUG': return 'bg-gray-500';
               case 'INFO': return 'bg-blue-500';
-              case 'WARNING': return 'bg-yellow-500';
+              case 'WARN': return 'bg-yellow-500';
               case 'ERROR': return 'bg-red-500';
+              case 'FATAL': return 'bg-purple-500';
               default: return 'bg-gray-500';
           }
       },
