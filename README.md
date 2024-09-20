@@ -1,2 +1,1 @@
-# logger-docker
-Sentry in docker
+Logger service
