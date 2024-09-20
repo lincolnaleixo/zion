@@ -1,2 +1,10 @@
 .env
 .DS_Store
+/go.sum
+
+# Cache directories
+/.cache
+/.tmp
+
+# Generated documentation
+/docs/
